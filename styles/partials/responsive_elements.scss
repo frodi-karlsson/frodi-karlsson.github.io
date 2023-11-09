@@ -1,0 +1,24 @@
+body {
+  font-size: $font-size;
+}
+
+.experience .experience-item-term h4 {
+  font-size: $font-size;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: $header-font-size;
+}
+
+img {
+  height: $cv-header-height;
+  width: $cv-header-height;
+}
+
+#cv-header {
+  height: $cv-header-height;
+}

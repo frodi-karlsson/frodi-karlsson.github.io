@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta SEO stuff -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Frodi Karlsson" />
+    <meta name="description" content="CV" />
+    <title>CV</title>
+    <!-- Compatibility -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com;"
+    />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Oswald:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <div class="pattern"><div class="noise"></div></div>
+  <body>
+    <article id="cv-wrapper">
+      <header id="cv-header">
+        <div class="intro">
+          <img
+            src="https://media.licdn.com/dms/image/D4D03AQF6d9IgWMFdWw/profile-displayphoto-shrink_200_200/0/1680155770868?e=1704931200&v=beta&t=36HwyFbDLJ8x-SbQfCgHZav8V8JKKndHdo40GTPVFA0"
+            alt="Fróði Karlsson"
+          />
+          <div class="name-and-occupation">
+            <h1>Fróði Karlsson</h1>
+            <h2>Fullstack Developer</h2>
+          </div>
+        </div>
+        <ul class="header-ul">
+          <li class="header-li">
+            <a href="https://github.com/frodi-karlsson">Github</a>
+          </li>
+          <li class="header-li">
+            <a href="mailto:frodikarlsson@gmail.com">Email</a>
+          </li>
+          <li class="header-li">
+            <a href="https://www.linkedin.com/in/frodikarlsson">LinkedIn</a>
+          </li>
+        </ul>
+      </header>
+      <section id="skills">
+        <h2 class="accented-header">Skills</h2>
+        <div class="skill-columns">
+          <div class="skill-column">
+            <h3>Hard Skills</h3>
+            <ul>
+              <li>Angular</li>
+              <li>React</li>
+              <li><span class="type-writer css-element">CSS, HTML and Javascript</span></li>
+              <li>Node.js</li>
+              <li>GCP, Azure</li>
+              <li>NoSQL</li>
+              <li>Docker, Kubernetes</li>
+              <li>CI/CD</li>
+            </ul>
+          </div>
+          <div class="skill-column">
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Agile Development</li>
+              <li>Fluent English, native Swedish and Icelandic</li>
+              <li>Problem Solving</li>
+              <li>Identifying Customer Needs</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="experience">
+        <h2 class="accented-header">Experience</h2>
+        <dl>
+          <dt class="experience-item-term">
+            <h3>CTO, Co-Founder</h3>
+            <h4>2020 - Present</h4>
+          </dt>
+          <dd class="experience-item-description">
+            <p>
+              Co-founded a startup that aims to increase online meeting
+              productivity with constructive data without sacrificing privacy.
+            </p>
+            <p>
+              I am one of three main developers for the product, having
+              worked with everything from native Windows C++ apps to kubernetes.
+            </p>
+          </dd>
+          <dt class="experience-item-term">
+            <h3>Web Developer</h3>
+            <h4>2018 - Present</h4>
+          </dt>
+          <dd class="experience-item-description">
+            <p>
+              I've worked on a variety of personal projects and freelance
+              for friends and family. <br />
+              Here are a couple of examples that are still up:
+              <ul>
+                <li>
+                    <a href="https://www.djass.com/">djass.com</a>
+                </li>
+                <li>
+                    <a href="https://www.karlolgeirsson.com/">karlolgeirsson.com</a>
+                </li>
+              </ul>
+              It's not much, but it's honest work.
+            </p>
+          </dd>
+          <dt class="experience-item-term">
+            <h3>Teaching Assistant</h3>
+            <h4>2020 - 2022</h4>
+          </dt>
+          <dd class="experience-item-description">
+            <p>
+              I've been a teaching assistant for various programming courses
+              for Scala and Java at LTH, where I helped students with their
+              assignments and graded their work. I like to think I was pretty
+              good at it, and I enjoyed it a lot.
+            </p>
+        </ul>
+      </section>
+      <section class="experience">
+        <h2 class="accented-header">Education</h2>
+        <dl>
+            <dt class="experience-item-term">
+              <h3>LTH, Datateknik
+              <h4>2020 - 2023</h4>
+            </dt>
+            <dd class="experience-item-description">
+              <p>
+                I'm currently still technically studying computer science at Lund University.
+                I have however taken a break the last year to pour all my hours into SpeakSum, as I felt
+                that it was a more valuable use of my time. Now I feel confident in my skills in the
+                field, both technical and interpersonal, and want to expand my horizons further.
+              </p>
+        </dl>
+      </section>
+    </article>
+  </body>
+</html>

@@ -42,7 +42,7 @@ body {
 }
 
 @media screen and (min-width: 601px) {
-  $cv-header-height: 100px;
+  $cv-header-height: fit-content;
   $font-size: 1rem;
   $header-font-size: 1.5rem;
   $pattern-size: 150px;
@@ -52,9 +52,9 @@ body {
 }
 
 @media print {
-  $cv-header-height: 60px;
+  $cv-header-height: fit-content;
   $font-size: 1rem;
-  $header-font-size: 1.5rem;
+  $header-font-size: 2rem;
   $pattern-size: 150px;
   $img-size: 80px;
 
@@ -62,11 +62,11 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  $cv-header-height: 80px;
+  $cv-header-height: fit-content;
   $font-size: 0.8rem;
   $header-font-size: 0.9rem;
   $pattern-size: 30px;
-  $img-size: 60px;
+  $img-size: 40px;
 
   @import "partials/responsive_elements.scss";
 }
@@ -207,7 +207,7 @@ h4 {
   width: 100%;
   text-align: center;
   margin: 0 0 1rem;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
 }
 
 .css-element {

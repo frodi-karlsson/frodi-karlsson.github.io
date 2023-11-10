@@ -58,11 +58,12 @@ label {
     display: flex;
     align-self: end;
     justify-self: flex-end;
-    width: fit-content;
     height: fit-content;
     overflow: visible;
+    text-align: center;
     min-width: 40px;
     padding: 0.5rem;
+    margin-left: 1rem;
     border-radius: 10px 10px 0 0;
     background-color: $article-background-color;
     color: $text-color;

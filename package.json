@@ -5,7 +5,9 @@
   "description": "A homepage of sortss",
   "main": "index.js",
   "scripts": {
-    "build:css": "node-sass --recursive -o dist styles/styles.scss",
+    "build:css:sass": "node-sass --recursive -o dist styles/styles.scss",
+    "build:css:auto": "postcss dist/styles.css --use autoprefixer -d dist",
+    "build:css": "npm run build:css:sass && npm run build:css:auto",
     "build:html": "npx pug templates/index.pug -o .",
     "build:pdf": "html-export-pdf-cli -i ./index.html -o cv.pdf --printBackground true --page-size A4",
     "build": "npm run build:css && npm run build:html",
@@ -17,7 +19,12 @@
     "html-export-pdf-cli": "^1.1.5",
     "node-sass": "^9.0.0",
     "nodemon": "^3.0.1",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
     "pug": "^3.0.2",
     "pug-cli": "^1.0.0-alpha6"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.16"
   }
 }

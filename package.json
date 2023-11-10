@@ -5,15 +5,16 @@
   "description": "A homepage of sortss",
   "main": "index.js",
   "scripts": {
-    "build-css": "node-sass --recursive -o dist styles/styles.scss",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-    "build-html": "npx pug templates/index.pug -o .",
-    "build": "npm run build-css && npm run build-html",
+    "build:css": "node-sass --recursive -o dist styles/styles.scss",
+    "build:html": "npx pug templates/index.pug -o .",
+    "build:pdf": "html-export-pdf-cli -i ./index.html -o cv.pdf --printBackground true --page-size A4",
+    "build": "npm run build:css && npm run build:html",
     "watch": "nodemon -e pug,scss -x \"npm run build\""
   },
   "author": "frodi-karlsson <frodikarlsson@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "html-export-pdf-cli": "^1.1.5",
     "node-sass": "^9.0.0",
     "nodemon": "^3.0.1",
     "pug": "^3.0.2",

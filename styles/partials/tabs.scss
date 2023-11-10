@@ -70,10 +70,10 @@ input:not(:checked) + label {
     color: white;
 }
 
-.tabdiv-header:has(> #tab-1:checked) ~ .tab-container > #cv-tab {
+.tabdiv-header:has(#tab-1:checked) + .tab-container > #cv-tab {
     display: flex;
 }
 
-.tabdiv-header:has(> #tab-2:checked) ~ .tab-container > #about-tab {
+.tabdiv-header:has(#tab-2:checked) + .tab-container > #about-tab {
     display: flex;
 }

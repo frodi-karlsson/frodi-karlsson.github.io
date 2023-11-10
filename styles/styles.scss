@@ -148,7 +148,7 @@ section {
   left: 0;
   margin: 0;
   padding: 0;
-  z-index: -1;
+  z-index: -2;
   background: conic-gradient(at 25% 25%, #0000 75%, $pattern-color-one 0) 0
       calc(3 * 150px / 4),
     conic-gradient(#0000 75%, $pattern-color-two 0) calc(150px / -8)

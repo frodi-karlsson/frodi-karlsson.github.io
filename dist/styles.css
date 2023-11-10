@@ -136,7 +136,7 @@ section {
   left: 0;
   margin: 0;
   padding: 0;
-  z-index: -1;
+  z-index: -2;
   background: conic-gradient(at 25% 25%, #0000 75%, #467588 0) 0 calc(3 * 150px / 4), conic-gradient(#0000 75%, #bea9bf 0) calc(150px / -8) calc(5 * 150px / 8), conic-gradient(at 25% 75%, #467588 25%, #bea9bf 0);
   background-size: 150px 150px;
   background-repeat: repeat;
@@ -427,8 +427,8 @@ input:not(:checked) + label {
   background-color: #c9579f;
   color: white; }
 
-.tabdiv-header:has(> #tab-1:checked) ~ .tab-container > #cv-tab {
+.tabdiv-header:has(#tab-1:checked) + .tab-container > #cv-tab {
   display: flex; }
 
-.tabdiv-header:has(> #tab-2:checked) ~ .tab-container > #about-tab {
+.tabdiv-header:has(#tab-2:checked) + .tab-container > #about-tab {
   display: flex; }

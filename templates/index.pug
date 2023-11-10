@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+    head
+    // Meta SEO stuff
+    meta(charset='UTF-8')
+    meta(name='author' content='Frodi Karlsson')
+    meta(name='description' content='CV')
+    title CV
+    // Compatibility
+    meta(content='width=device-width, initial-scale=1' name='viewport')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    // CSP
+    meta(http-equiv='Content-Security-Policy' content="style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;")
+    meta(http-equiv='Content-Security-Policy' content="style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com;")
+    meta(http-equiv='Content-Security-Policy' content="script-src 'self'")
+    // Fonts
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Oswald:wght@200&display=swap' rel='stylesheet')
+    // Styles
+    link(rel='stylesheet' href='dist/styles.css')
+    .pattern
+    .noise
+    include ./cv.pug

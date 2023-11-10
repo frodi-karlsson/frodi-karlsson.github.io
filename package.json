@@ -1,0 +1,21 @@
+{
+  "name": "frodi-karlsson-gh-pages",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A homepage of sortss",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --recursive -o dist styles/styles.scss",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "build-html": "npx pug templates/index.pug -o .",
+    "watch": "nodemon -e pug,scss -x \"npm run build-css && npm run build-html\""
+  },
+  "author": "frodi-karlsson <frodikarlsson@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.0.1",
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

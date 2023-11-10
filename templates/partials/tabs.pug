@@ -1,0 +1,10 @@
+.tabdiv-header
+        input(type='radio', name='tabs', id='tab-1', checked)
+        label(for='tab-1') CV
+        input(type='radio', name='tabs', id='tab-2')
+        label(for='tab-2') About
+.tab-container
+    .tab#cv-tab
+        include cv.pug
+    .tab#about-tab
+        include about.pug

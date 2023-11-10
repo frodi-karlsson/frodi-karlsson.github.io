@@ -1,0 +1,79 @@
+.tab-container {
+    background-color: $article-background-color;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: calc(min(80%, 800px));
+    height: 100%;
+    max-height: 80%;
+    overflow-y: scroll;
+    overflow-y: overlay;
+    overflow-x: hidden;
+}
+
+.tabdiv-header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: fit-content;
+    width: calc(min(80%, 800px));
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    @media print {
+        display: none;
+    }
+}
+
+.tab {
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    display: none;
+}
+
+#cv-tab {
+    @import "cv.scss";
+}
+
+#about-tab {
+    @import "about.scss";
+}
+
+input {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 10px 10px 0 0;
+    background-color: $article-background-color;
+    color: $text-color;
+    transition: background-color 0.5s ease;
+}
+
+input:not(:checked) + label {
+    cursor: pointer;
+    background-color: $accent-color;
+    color: white;
+}
+
+.tabdiv-header:has(> #tab-1:checked) ~ .tab-container > #cv-tab {
+    display: flex;
+}
+
+.tabdiv-header:has(> #tab-2:checked) ~ .tab-container > #about-tab {
+    display: flex;
+}

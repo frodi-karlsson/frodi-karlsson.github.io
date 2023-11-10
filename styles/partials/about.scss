@@ -1,0 +1,79 @@
+mark {
+    margin: 0 -0.4em;
+    padding: 0.1em 0.4em;
+    color: #000;
+    border-radius: 0.8em 0.3em;
+    background: transparent;
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 225, 0, 0.1),
+      rgba(255, 225, 0, 0.7) 4%,
+      rgba(255, 225, 0, 0.3)
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+#about-wrapper {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        margin: 2rem 0;
+    }
+
+    header {
+        width: fit-content;
+    }
+
+    .type-writer {
+        width: 0;
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+
+    }
+
+    #about-header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 2rem 0;
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    #introduction {
+        height: 100%;
+        .type-writer {
+            animation-delay: 0s;
+        }
+    }
+
+    #interests {
+        height: 100%;
+        .type-writer {
+            animation-delay: 3.5s;
+        }
+    }
+
+    #this-page {
+        height: 100%;
+        .type-writer {
+            animation-delay: 7s;
+        }
+    }
+}
+
+

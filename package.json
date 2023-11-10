@@ -5,7 +5,7 @@
   "description": "A homepage of sortss",
   "main": "index.js",
   "scripts": {
-    "build-css": "npx node-sass --recursive -o dist styles/styles.scss",
+    "build-css": "node-sass --recursive -o dist styles/styles.scss",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "build-html": "npx pug templates/index.pug -o .",
     "build": "npm run build-css && npm run build-html",

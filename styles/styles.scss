@@ -32,8 +32,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 
   @media print {
     height: 29.7cm;
@@ -137,8 +137,8 @@ section {
   z-index: -1;
   mix-blend-mode: overlay;
 
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 
   @media print {
     height: 29.7cm;
@@ -147,8 +147,8 @@ section {
 }
 
 .pattern {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   top: 0;
   left: 0;
   margin: 0;

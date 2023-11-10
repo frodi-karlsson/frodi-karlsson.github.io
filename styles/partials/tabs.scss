@@ -95,6 +95,11 @@ input:not(:checked) + label {
     color: white;
 }
 
+input:checked + label {
+    // for getting rid of drop shadow
+    z-index: 1;
+}
+
 #tab-1:checked ~ .tab-content {
     #cv-tab {
         display: flex;

@@ -64,7 +64,7 @@ body {
 @media screen and (max-width: 600px) {
   $cv-header-height: 80px;
   $font-size: 0.8rem;
-  $header-font-size: 0.8rem;
+  $header-font-size: 0.9rem;
   $pattern-size: 30px;
   $img-size: 60px;
 
@@ -196,6 +196,8 @@ h4 {
   border-bottom: 1px dotted $accent-color;
   width: 100%;
   text-align: center;
+  margin: 0 0 1rem;
+  padding: 0.5rem 0;
 }
 
 .css-element {

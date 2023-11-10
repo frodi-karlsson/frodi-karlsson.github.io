@@ -69,7 +69,7 @@ body {
   h2,
   h3,
   h4 {
-    font-size: 0.8rem; }
+    font-size: 0.9rem; }
   img {
     height: 60px;
     width: 60px; }
@@ -172,7 +172,9 @@ h4 {
   color: #c9579f;
   border-bottom: 1px dotted #c9579f;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  margin: 0 0 1rem;
+  padding: 0.5rem 0; }
 
 .css-element {
   display: inline-block;
@@ -248,12 +250,14 @@ li::before {
 
 #cv-tab .header-ul {
   list-style: none;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 0; }
+  margin: 0 0.5rem;
+  height: 100%; }
+  @media screen and (max-width: 600px) {
+    #cv-tab .header-ul {
+      padding: 0;
+      font-size: 0.6rem; }
+      #cv-tab .header-ul a {
+        text-decoration: none; } }
 
 #cv-tab #cv-header {
   display: flex;
@@ -261,21 +265,28 @@ li::before {
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  margin: 0 0 2rem; }
+  margin: 0; }
 
 #cv-tab .intro {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100%;
   height: fit-content; }
   #cv-tab .intro img {
     border-radius: 50%;
     margin: 0; }
-  #cv-tab .intro .name-and-occupation h2,
-  #cv-tab .intro .name-and-occupation h3 {
-    margin: 0 0 0.3rem 1rem; }
+  #cv-tab .intro .name-and-occupation {
+    width: 100%;
+    margin-left: 1rem; }
+    #cv-tab .intro .name-and-occupation h1,
+    #cv-tab .intro .name-and-occupation h2 {
+      margin: 0 0 0.3rem 0.5rem; }
+      @media screen and (max-width: 600px) {
+        #cv-tab .intro .name-and-occupation h1,
+        #cv-tab .intro .name-and-occupation h2 {
+          margin: 0; } }
 
 #cv-tab #skills {
   width: 100%;

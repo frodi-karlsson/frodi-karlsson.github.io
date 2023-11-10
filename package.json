@@ -8,7 +8,8 @@
     "build-css": "node-sass --recursive -o dist styles/styles.scss",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "build-html": "npx pug templates/index.pug -o .",
-    "watch": "nodemon -e pug,scss -x \"npm run build-css && npm run build-html\""
+    "build": "npm run build-css && npm run build-html",
+    "watch": "nodemon -e pug,scss -x \"npm run build\""
   },
   "author": "frodi-karlsson <frodikarlsson@gmail.com>",
   "license": "ISC",

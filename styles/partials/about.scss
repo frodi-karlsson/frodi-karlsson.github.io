@@ -2,6 +2,9 @@ mark {
     margin: 0 -0.4em;
     padding: 0.1em 0.4em;
     color: #000;
+    -moz-border-radius: 0.8em 0.3em;
+    -webkit-border-radius: 0.8em 0.3em;
+    -khtml-border-radius: 0.8em 0.3em;
     border-radius: 0.8em 0.3em;
     background: transparent;
     background-image: linear-gradient(

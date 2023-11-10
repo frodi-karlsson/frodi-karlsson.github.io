@@ -1,36 +1,35 @@
-.tab-container {
+.tabdiv-container {
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr 4fr 4fr;
+    grid-template-rows: 1fr 14fr 1fr;
+    height: 100%;
+    width: calc(min(90%, 1000px));
+    max-height: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+.tab-content {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 6;
     background-color: $article-background-color;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     justify-content: flex-start;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    width: calc(min(80%, 800px));
     height: 100%;
-    max-height: 80%;
     overflow-y: scroll;
     overflow-y: overlay;
     overflow-x: hidden;
-}
-
-.tabdiv-header {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    height: fit-content;
-    width: calc(min(80%, 800px));
-    margin: 0;
-    padding: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
 
     @media print {
-        display: none;
+        grid-row-start: 1;
     }
 }
 
@@ -56,12 +55,37 @@ input {
 }
 
 label {
-    display: inline-block;
+    display: flex;
+    align-self: end;
+    justify-self: flex-end;
+    width: fit-content;
+    height: fit-content;
+    overflow: visible;
+    min-width: 40px;
     padding: 0.5rem;
     border-radius: 10px 10px 0 0;
     background-color: $article-background-color;
     color: $text-color;
     transition: background-color 0.5s ease;
+    user-select: none;
+
+    @media print {
+        display: none;
+    }
+}
+
+label[for="tab-1"] {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+label[for="tab-2"] {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
 
 input:not(:checked) + label {
@@ -70,10 +94,14 @@ input:not(:checked) + label {
     color: white;
 }
 
-.tabdiv-header:has(#tab-1:checked) + .tab-container > #cv-tab {
-    display: flex;
+#tab-1:checked ~ .tab-content {
+    #cv-tab {
+        display: flex;
+    }
 }
 
-.tabdiv-header:has(#tab-2:checked) + .tab-container > #about-tab {
-    display: flex;
+#tab-2:checked ~ .tab-content {
+    #about-tab {
+        display: flex;
+    }
 }

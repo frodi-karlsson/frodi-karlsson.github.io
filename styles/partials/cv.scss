@@ -1,19 +1,6 @@
 #cv-wrapper {
-    height: 100%;
-    width: 100%;
-}
-
-.header-ul {
-    list-style: none;
-    margin: 0 0.5rem;
-    height: 100%;
-    @media screen and (max-width: 600px) {
-        a {
-            text-decoration: none;
-        }
-        padding: 0;
-        font-size: 0.6rem;
-    }
+  height: 100%;
+  width: 100%;
 }
 
 #cv-header {
@@ -24,32 +11,85 @@
   width: 100%;
   margin: 0;
 
+  .header-ul {
+    list-style: none;
+    height: 100%;
+    align-items: flex-end;
+    margin: 0 0 0 0.5rem;
+    width: max-content;
+    li {
+      width: fit-content;
+    }
+    li::before {
+        content: "";
+    }
+    @media screen and (max-width: 600px) {
+      a {
+        text-decoration: none;
+      }
+      padding: 0;
+      font-size: 0.7rem;
+    }
+  }
 }
 
 .intro {
   display: flex;
+  flex-grow: 2;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: fit-content;
+  justify-content: flex-start;
+  width: 70%;
+  height: 100%;
 
+  @media screen and (max-width: 600px) {
+    justify-content: space-evenly;
+  }
 
   img {
     border-radius: 50%;
-    margin: 0;
+    margin: 0 1.5rem 0 0;
+
+    @media screen and (max-width: 600px) {
+        margin: 0;
+    }
   }
 
   .name-and-occupation {
-    width: 100%;
+    width: max-content;
     h1,
     h2 {
-      margin: 0 0 0.3rem 0.5rem;
+      margin: 0;
+      text-align: left;
       @media screen and (max-width: 600px) {
         margin: 0;
+        text-align: center;
       }
     }
-    margin: 0 0.5rem;
+    margin: 0;
+  }
+}
+
+ul {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 1rem 0 0 2rem;
+  width: 100%;
+  @media screen and (max-width: 600px) {
+    line-height: 1.8rem;
+    width: min-content;
+  }
+
+  li {
+    width: max-content;
+    max-width: 100%;
+    height: min-content;
+    white-space: nowrap;
   }
 }
 
@@ -78,19 +118,6 @@
         text-align: center;
         width: 100%;
         margin: 0;
-      }
-      ul {
-        line-height: 1.5rem;
-        margin: 0;
-        padding: 1rem 0 0 2rem;
-        @media screen and (max-width: 600px) {
-          line-height: 1.2rem;
-        }
-
-        li {
-            width: max-content;
-            white-space: nowrap;
-        }
       }
     }
   }
@@ -121,9 +148,9 @@
     }
 
     h3::before {
-        color: $accent-color;
-        content: ">";
-        width: 1rem;
+      color: $accent-color;
+      content: ">";
+      width: 1rem;
     }
 
     h4 {

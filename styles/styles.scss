@@ -7,11 +7,13 @@ $link-visited-color: $accent-color;
 $pattern-color-one: #467588;
 $pattern-color-two: #bea9bf;
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
 
   @media print {
     height: 29.7cm;
@@ -32,8 +34,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 
   @media print {
     height: 29.7cm;
@@ -46,27 +48,27 @@ body {
   $font-size: 1rem;
   $header-font-size: 1.5rem;
   $pattern-size: 150px;
-  $img-size: 100px;
+  $img-size: 120px;
 
   @import "partials/responsive_elements.scss";
 }
 
 @media print {
   $cv-header-height: fit-content;
-  $font-size: 1rem;
+  $font-size: 0.8rem;
   $header-font-size: 2rem;
-  $pattern-size: 150px;
+  $pattern-size: 180px;
   $img-size: 80px;
 
   @import "partials/responsive_elements.scss";
 }
 
 @media screen and (max-width: 600px) {
-  $cv-header-height: fit-content;
+  $cv-header-height: 6rem;
   $font-size: 0.8rem;
-  $header-font-size: 0.9rem;
-  $pattern-size: 30px;
-  $img-size: 40px;
+  $header-font-size: 0.8rem;
+  $pattern-size: 75px;
+  $img-size: 50px;
 
   @import "partials/responsive_elements.scss";
 }
@@ -131,8 +133,8 @@ section {
   z-index: -1;
   mix-blend-mode: overlay;
 
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 
   @media print {
     height: 29.7cm;
@@ -141,8 +143,8 @@ section {
 }
 
 .pattern {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
   margin: 0;

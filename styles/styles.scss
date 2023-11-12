@@ -55,10 +55,10 @@ body {
 
 @media print {
   $cv-header-height: fit-content;
-  $font-size: 0.8rem;
-  $header-font-size: 2rem;
+  $font-size: 1rem;
+  $header-font-size: 1.6rem;
   $pattern-size: 180px;
-  $img-size: 80px;
+  $img-size: 60px;
 
   @import "partials/responsive_elements.scss";
 }
@@ -178,6 +178,7 @@ section {
 
 a {
   color: $link-color;
+  text-decoration: none;
 }
 
 p {
@@ -210,6 +211,10 @@ h4 {
   text-align: center;
   margin: 0 0 1rem;
   padding: 1rem 0;
+
+  @media print {
+    padding: 0.5rem 0;
+  }
 }
 
 .css-element {

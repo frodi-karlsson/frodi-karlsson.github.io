@@ -21,4 +21,4 @@ jobs:
           with:
             commit_message: "🤖 Build"
             commit_options: '--no-verify --signoff'
-            file_pattern: '*.html'
+            file_pattern: '*.pdf'

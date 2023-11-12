@@ -21,6 +21,6 @@ jobs:
           with:
             commit_message: "🤖 Build"
             commit_options: '--no-verify --signoff'
-            repository: 'git@github.com:frodi-karlsson/frodi-karlsson.github.io.git'
+            repository: '.'
             file_pattern: '*.pdf'
             branch: 'main'

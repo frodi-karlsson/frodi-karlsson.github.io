@@ -17,12 +17,8 @@ jobs:
         - run: npm ci
         - run: npm run build
         - run: npm run build:pdf
-    commit-pdf:
-        runs-on: ubuntu-latest
-        needs: build
-        steps:
         - uses: stefanzweifel/git-auto-commit-action@v4
           with:
-            commit_message: "🤖 Build PDF"
+            commit_message: "🤖 Build"
             commit_options: '--no-verify --signoff'
-            file_pattern: '*.pdf'
+            file_pattern: '*.html'

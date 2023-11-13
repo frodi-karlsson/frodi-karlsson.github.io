@@ -1,9 +1,10 @@
 $text-color: black;
 $accent-color: #c9579f;
 $article-background-color: #f3f4f1;
-$link-color: $text-color;
-$link-hover-color: #8b6480;
-$link-visited-color: $accent-color;
+$link-color: blue;
+$link-hover-color: lighten(blue, 30%);
+$link-visited-color: darken(purple, 10%);
+$link-visited-hover-color: lighten(purple, 20%);
 $pattern-color-one: #467588;
 $pattern-color-two: #bea9bf;
 
@@ -181,16 +182,20 @@ a {
   text-decoration: none;
 }
 
-p {
-  margin: 0;
+a:visited {
+  color: $link-visited-color;
+}
+
+a:visited:hover {
+  color: $link-visited-hover-color;
 }
 
 a:hover {
   color: $link-hover-color;
 }
 
-a:visited {
-  color: $accent-color;
+p {
+  margin: 0;
 }
 
 h1,

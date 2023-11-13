@@ -21,7 +21,7 @@
       width: fit-content;
     }
     li::before {
-        content: "";
+      content: "";
     }
     @media screen and (max-width: 600px) {
       a {
@@ -126,22 +126,22 @@ ul {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  dl {
-    margin: 0;
-  }
   .experience-item-term {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    margin: 0.5rem 0 1rem;
+    margin: 0.5rem auto 1rem;
     max-width: 100%;
-    width: 100%;
-    border: 1px solid $accent-color;
-        border-radius: 10px;
+    width: 80%;
+    padding: 0.5rem 0;
+
+    @media print {
+      margin: 0 auto;
+    }
 
     @media screen and (max-width: 600px) {
-        flex-direction: column;
+      flex-direction: column;
     }
 
     h4 {
@@ -156,29 +156,28 @@ ul {
   .experience-item-description {
     margin-inline-start: 0rem;
     max-width: 100%;
-    margin: 0.5rem 1rem 2rem;
+    margin: 0.5rem 1rem 1.5rem;
+    padding: 0.5rem 2rem;
+    border-left: 1px solid $accent-color;
     @media screen and (max-width: 600px) {
-        margin: 1rem 10% 1.5rem;
+      margin: 1rem 0.5rem 1.5rem;
+      padding: 0rem 1rem;
     }
     @media print {
-        margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
     p {
       width: 100%;
       line-height: 1.3rem;
-      @media print {
-        margin: 0 5rem 0 0;
-      }
     }
 
     .description-header {
-        text-align: left;
-        margin: 1rem 0 0.5rem 0;
-        font-size: 1rem;
-        width: fit-content;
-        font-weight: lighter;
-        color: $accent-color;
-        border-bottom: 1px dashed $accent-color;
+      text-align: left;
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      width: fit-content;
+      font-weight: lighter;
+      color: $accent-color;
     }
   }
 }

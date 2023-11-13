@@ -58,7 +58,7 @@ body {
 @media print {
   $cv-header-height: fit-content;
   $font-size: 0.8rem;
-  $header-font-size: 1.4rem;
+  $header-font-size: 1.2rem;
   $pattern-size: 180px;
   $img-size: 60px;
 
@@ -214,8 +214,9 @@ h4 {
   color: $accent-color;
   width: 100%;
   text-align: center;
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
   padding: 1rem 0;
+  border-bottom: 1px dotted $accent-color;
 
   @media print {
     padding: 0.5rem 0;
@@ -237,11 +238,16 @@ h4 {
     blink-caret 0.75s forwards 0s 5;
   overflow: hidden;
   white-space: nowrap;
+  height: min-content;
   @media print {
     animation: none;
     width: fit-content;
     border-right: none;
   }
+}
+
+.type-writer-container {
+  text-wrap: nowrap;
 }
 
 ul {
